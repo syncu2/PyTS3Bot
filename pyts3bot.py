@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import ecdsa, struct, time, binascii, hexdump, base64, random, socket, sys, datetime, hashlib, pyasn1, re, tweepy
+import ecdsa, struct, time, binascii, hexdump, base64, random, socket, sys, datetime, hashlib, pyasn1, re
 from threading import Thread, Timer
 from pyasn1.codec.der.encoder import encode
 from pyasn1.codec.der.decoder import decode
