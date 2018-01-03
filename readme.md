@@ -1,11 +1,11 @@
 PyTS3Bot
-===================
+========
 
 This is a basic Python 3 implementation of the TeamSpeak 3 Client (**not** ServerQuery) protocol.
 It can be used to implement own resource-efficient, headless and platform-independent TS3 bots for various purposes. Check out [Splamy/TS3AudioBot](https://github.com/Splamy/TS3AudioBot/blob/master/TS3Client/ts3protocol.md) to learn more about the TS3 protocol.
 
-0. Requirements
--------------------
+## 0. Requirements ##
+
     pip3 install pyasn1
     pip3 install pycryptodome
     pip3 install fastecdsa
@@ -13,8 +13,7 @@ It can be used to implement own resource-efficient, headless and platform-indepe
 Note: The script was only tested on Linux so far, but it *should* be platform-independent.
 
 
-1. Generate identity 
----------------------
+## 1. Generate identity ##
 Before joining a TS3 server you first need to generate an ECDSA identity. You can use the script `identity.py` to do that. 
 Simply run `./identity.py` or `python3 identity.py` . The script will generate a new key pair and immediately print a Python binary string representing the private key. Example:
 
@@ -34,8 +33,7 @@ If you want to further increase the security level at a later point, uncomment l
 
 Then, run the script again as explained above.
 
-2. Run the bot 
----------------------
+## 2. Run the bot ##
 The following snippet (see file `pyts3bot-example.py`) will connect the bot to a TS3 server:
 
     from pyts3bot import Identity, TS3Client
