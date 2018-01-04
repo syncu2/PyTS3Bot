@@ -9,6 +9,7 @@ It can be used to implement own resource-efficient, headless and platform-indepe
     pip3 install pyasn1
     pip3 install pycryptodome
     pip3 install fastecdsa
+    pip3 install ecdsa
 
 Note: The script was only tested on Linux so far, but it *should* be platform-independent.
 
