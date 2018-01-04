@@ -22,10 +22,10 @@ keyoffset  = 0
 # Data structure for ASN.1-DER
 class PubKey(univ.Sequence):
 	componentType = namedtype.NamedTypes(
-        namedtype.NamedType('b', univ.BitString('0')),
+        namedtype.NamedType('b', univ.BitString("'0'B")),
         namedtype.NamedType('c', univ.Integer(32)),
-        namedtype.NamedType('x', univ.Integer()),
-        namedtype.NamedType('y', univ.Integer()),
+        namedtype.NamedType('x', univ.Integer(0)),
+        namedtype.NamedType('y', univ.Integer(0))
     )
 
 
@@ -34,12 +34,12 @@ pubkey = key.get_verifying_key()
 pkey = PubKey()
 pkey['x'] = pubkey.pubkey.point.x()
 pkey['y'] = pubkey.pubkey.point.y()
+pkey['c'] = 32
+pkey['b'] = "'0'B"
 
 print(key.to_string())
 
 i = 0
-#keyoffset = 4469106
-#i = 4469106
 mx = 0
 omega = base64.b64encode(encode(pkey))
 
